@@ -1,0 +1,131 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    background-color: #ffcb6b;
+}
+
+.cap {
+    background-color: #678089;
+    display: flex;
+    border-radius: 20px;
+}
+
+.image {
+    width: 100px;
+    height: auto;
+    position: relative;
+    left: 20px;
+}
+
+.tohome {
+    margin-left: 40px;
+    color: #ffffff;
+}
+
+.tx {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+    width:400px;
+    position:relative;
+    text-align: center;
+    top:80px;
+    border-bottom: 2px solid white;
+    margin-left:37%;
+}
+
+a {
+    color:#ffffff;
+}
+
+.sss {
+    position: relative;
+    text-align: center;
+    top: 130px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.low {
+    background-color: #678089;
+    position: relative;
+    bottom: -260px;
+}
+
+.lrbox {
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 100px;
+    left: 38%;
+    padding: 100px 100px 40px 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.usbox {
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 130px;
+    left: 33%;
+    padding: 70px 70px 40px 70px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.ob {
+    width: 500px;
+    text-align: center;
+    margin-left: 33%;
+}
+
+.olb {
+    background-color: cornflowerblue;
+    font-size: 30px;
+    block-size: 80px;
+    margin-bottom: 25px;
+}
+
+input {
+    block-size: 50px;
+    text-align:center;
+    margin-bottom:50px;
+    color: black;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: center;
+    background-color: powderblue;
+    color: black;
+}
+
+#breg {
+    color: lightgray;
+    font-size: 15px;
+}
+
+#blo {
+    block-size: 35px;
+    margin-bottom:45px;
+}

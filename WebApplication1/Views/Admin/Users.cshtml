@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Delivery.DataBase.Models.UserModel>
+<div>
+    <h1>
+        Список користувачів
+    </h1>
+        <div>
+            <table id="tb">
+                <thead>
+                    <tr>
+                        <th>Айді</th>
+                        <th>Ім'я</th>
+                        <th>Пароль</th>
+                        <th>Номер телефону</th>
+                        <th>Електронна скринька</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Password)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        </tr>
+                    }
+            </table>
+        </div>
+</div>

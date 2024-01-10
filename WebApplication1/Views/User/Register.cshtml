@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Створення аккаунта</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div>
+        <div class="lrbox">
+            <h1>Реєстрація</h1>
+            <form method="post" action="@Url.Action("CreateAccount", "User")">
+                <div data-validate="Usermame is required">
+                    <input type="text" name="Name" id="Name" placeholder="Ім'я">
+                </div>
+                <div data-validate="Password is required">
+                    <input type="text" name="Password" id="Password" placeholder="Пароль">
+                </div>
+                <div data-validate="Phone number">
+                    <input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="Номер телефону">
+                </div>
+                <div data-validate="Email is required">
+                    <input type="text" name="Email" id="Email" placeholder="Елетронна скринька">
+                </div>
+                <div>
+                    <button id="blo" type="submit">Створити аккаунт</button>
+                </div>
+                <div>
+                    <a id="breg" href="Login">Ввійти в наявний аккаунт</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
+<script>
+    function Validate() {
+        $.ajax(
+            {
+                type: "POST",
+                url: '@Url.Action("Validate", "User")',
+                data: {
+                    username: $('#Name').val(),
+                    password: $('#Password').val()
+                        phoneNumber: $('#PhoneNumber').val()
+                        email: $('#Email').val()
+                },
+                error: function (result) {
+                    alert("Error! Enter the data correctly!");
+                },
+                success: function (result) {
+                    console.log(result);
+                    if (result.status == true) {
+                        window.location.href = '@Url.Action("Index", "Home")';
+                    }
+                    else {
+                        alert(result.message);
+                    }
+                }
+            });
+    }
+</script>

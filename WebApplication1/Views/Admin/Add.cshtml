@@ -1,0 +1,24 @@
+﻿<div>
+    <h1>
+        Додавання нового продукту
+    </h1>
+    <div>
+        <form method="post" action="@Url.Action("ProductAdd", "Admin")">
+            <div>
+                <input type="text" name="Id" placeholder="Номер продукту">
+            </div>
+            <div>
+                <input type="text" name="Name" placeholder="Назва продукту">
+            </div>
+            <div>
+                <input type="number" name="Amount" placeholder="Кількість">
+            </div>
+            <div>
+                <input type="number" name="Price" placeholder="Ціна">
+            </div>
+            <div>
+                <button id="blo" type="submit">Додати продукт</button>
+            </div>
+        </form>
+    </div>
+</div>

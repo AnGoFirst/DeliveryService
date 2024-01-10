@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Delivery.DataBase.Models.PurchaseModel>
+<div>
+    <h1>
+        Кур'єр
+    </h1>
+    <h3>Дії із замовленнями: </h3>
+<div>
+    <button class="olb" type="submit"><a href="Courier/Take">Взяти замовлення</a></button>
+</div>
+<div>
+    <button class="olb" type="submit"><a href="Courier/Close">Закрити замовлення</a></button>
+</div>
+    <div>
+	    <table id="tb">
+            <thead>
+                <tr>
+                    <th>Айді</th>
+                    <th>Номер продукту</th>
+                    <th>Кількість</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProductStatus)</td>
+                    </tr>
+                }
+        </table>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<div class="usbox">
+    <h1>Оформлення замовлення</h1>
+        <h2>Виберіть продукт: </h2>
+    <form method="post" action="@Url.Action("BuyProduct", "User")">
+        <div>
+            <input type="text" name="ProductName" placeholder="Назва продукту">
+        </div>
+        <div>
+            <input type="number" name="Amount" placeholder="Кількість">
+        </div>
+        <div>
+            <button id="blo" type="submit">Оформити замовлення</button>
+        </div>
+    </form>
+</div>
